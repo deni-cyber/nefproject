@@ -24,3 +24,11 @@ class Product(models.Model):
     product_image = models.ImageField(upload_to='products_images/', default='default_image.jpg')
     def __str__(self):
         return self.name
+    
+class Worker(models.Model):
+    name = models.CharField(max_length=100)
+    position= models.CharField(max_length=100)
+    description = models.TextField()
+    worker_image = models.ImageField(upload_to='products_images/', default='default_image.jpg')
+    def __str__(self):
+        return self.name
