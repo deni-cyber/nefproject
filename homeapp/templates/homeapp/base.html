@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'homeapp/css/style.css' %}">
+    <script src="{% static 'homeapp/script.js' %}"></script>
+
+    <title>{% block title %}North Edge Fabricators ltd{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <style>
+      body {
+        /*background-image: url("{% static 'images/bgnd3.jpg' %}"); */
+        background-image: linear-gradient(to top left , blue, orangered);
+
+        border-image-repeat: no-repeat;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        /* Additional background styles (e.g., repeat, size, position) can be added here */
+        }
+
+
+      section{
+        background-image: linear-gradient(to top right  , orangered, blue);
+        /*background-color: white;*/
+        counter-reset: white;
+        margin: 0px;
+        }
+      #bgimg{
+        background-image: url("{% static 'images/bgnd.jpg' %}");
+        background-repeat: repeat-x;
+        text-align: center;
+        padding: 10px;
+        background-attachment: local;
+        background-size: contain;
+        }
+      .gradient-section {
+        height: 300px;
+        background-image: url("{% static 'images/header3_bg.jpg' %}");
+        color: white;
+        text-align: center;
+        display: flex;
+        padding: 100px;
+        }
+
+        
+      #services{
+        text-align: center;
+        text-decoration: wavy;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        padding: 20px;
+        background-attachment: fixed;
+        background-image: url("{% static 'images/services_bg.jpeg' %}");
+        background-repeat: repeat-x;
+        background-position: center;
+
+        }
+      #animatedDiv {
+        position: relative;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+     
+
+      #horizontalDiv {
+        position: relative;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 1s ease;
+        transform: translateX(-100px);
+      }
+
+      #verticalDiv {
+        opacity: 0;
+        transition: opacity 1s ease, transform 3s ease;
+        transform: translateY(20px);
+      }
+
+        
+
+    </style>
+
+
+</head>
+<body>
+     <header>
+      <div>
+      <a class="navbar-brand" href="{% url 'home' %}" >
+        {% load static %}
+        <img id="logo" src="{% static 'homeapp/images/logo.png' %}" alt="My Image">
+      </a>
+    </div>
+        <div style="text-align: center;  margin-left: 0px; margin-right: 0px; align-items: center;">
+            
+                <ul >
+                    <li>
+                      
+                    </li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+
+        </div>
+    </header>
+
+    
+
+
+  <main>
+    {% block content %}
+    <!-- Add your specific content here -->
+    {% endblock %}
+  </main>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+  <script>
+    function animateOnScroll(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateX(0)";
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    const horizontalDiv = document.getElementById("horizontalDiv");
+    const verticalDiv = document.getElementById("verticalDiv");
+    const observerOptions = { root: null, threshold: 0.5 }; // Threshold can be adjusted as per your preference
+
+    const horizontalObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+    horizontalObserver.observe(horizontalDiv);
+
+    const verticalObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+    verticalObserver.observe(verticalDiv);
+  </script>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted " >
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <h4><span style="color: white;">Get connected with us on social networks:</span></h4>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary" style="color: white;">
+            <img src="{% static 'homeapp/images/facebook.png' %}" style="border: 2px; border-color:
+            white; padding: 5px; border-radius: 1px; width: 30px; height:30px ;"alt="icon Image" >
+          <i class="fab fa-facebook-f">northedgefabricatorsltd</i>
+        </a>
+        <a href="" class="me-4 link-secondary" style="color: white;">
+            <img src="{% static 'homeapp/images/instagram.png' %}" style="border: 2px; border-color:
+            white; padding: 5px; border-radius: 1px; width: 30px; height:30px ;"alt="icon Image" >
+          <i class="fab fa-instagram">northedgefabricatorsltd</i>
+        </a>
+        <a href="" class="me-4 link-secondary" style="color: white;">
+            <img src="{% static 'homeapp/images/twitter.png' %}" style="border: 2px; border-color:
+            white; padding: 5px; border-radius: 1px; width: 30px; height:30px ;"alt="icon Image" >
+          <i class="fab fa-twitter">@nefltd</i>
+        </a>
+        <a href="" class="me-4 link-secondary" style="color: white;">
+            <img src="{% static 'homeapp/images/sms.png' %}" style="border: 2px; border-color:
+            white; padding: 5px; border-radius: 1px; width: 30px; height:30px ;"alt="icon Image" >
+          <i class="fab fa-google"> +254 721 394 475</i>
+        </a>
+        
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <img src="{% static 'homeapp/images/logo.png' %}" style="border: 2px; border-color:
+             white; padding: 5px; border-radius: 1px; width: 60px; height:60px ;"alt="My Image" >
+          
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4"  style="color: white;">
+                NorthEdgeFabricatorsLtd
+            </h6>
+            <p>
+                Email-northedgefabricatorsltd@gmail.com<br/>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">fabrication services</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">industrial machines</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">metal Furnitures</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">metal parts and fittings</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">home</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">about</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">services</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">contact us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i>Kariobangi-south ,Nairobi, outering-road, Kenya</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> +254 721 394 475</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> +254 *** *** *** </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.733); color: white;">
+      © 2023 Copyright
+      <a class="text-reset fw-bold" href="{% url 'home' %}">NorthEdgeFabricatorsLtd</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+</html>

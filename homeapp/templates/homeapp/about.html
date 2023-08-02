@@ -1,0 +1,167 @@
+{% extends 'homeapp/base.html' %}
+
+{% block title %}North Edge Fabricators - About {% endblock %}
+
+{% block theme %}theme1{% endblock %}
+
+
+{% block content %}
+
+    {% load static%}
+
+  
+    <div style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
+      <card>
+      <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">Background</h5>  
+
+        <p style="color: white;">In 2020, in Nairobi, Kenya, a group of skilled individuals founded "North Edge Fabricators Ltd."
+          With a passion for metalwork and a commitment to quality and innovation, they crafted iconic structures and artwork. 
+          Beyond their workshop, they uplifted the community by hiring and training from disadvantaged backgrounds. 
+          Their impact and artistry soon gained recognition, making North Edge a beacon of inspiration in the industry.
+        </p>
+      </card>
+    </div>
+    
+
+<section style="margin: 10px; padding: 20px; border-radius: 5px; ">
+    <h2 class="pb-2 border-bottom" style="color: white; text-align: center;">OUR SERVICES</h2>
+
+<div class="container px-4 py-5" id="featured-3">
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" >
+    {% for service in services %}
+    <div class="feature col">
+      <div class="feature-icon ">
+          <img src="{{service.service_image.url}}" alt="service images" style=" padding: 0px; align-content: center; border: solid; 
+          border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 300px; height:300px ;
+          border-color: rgb(255, 255, 255);">
+      </div>
+      <h2 style="color: gold;">{{ service.name }}</h2>
+      <p style="color: white;" >{{ service.description }}</p>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+</section>
+
+<section style=" margin: 10px; padding: 20px; border-radius: 5px; ">
+  <h2 class="pb-2 border-bottom" style="color: white; text-align: center;"> PRODUCTS </h2>
+
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" id="horizontalDiv">
+      {% for product in products %}
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3" style="border-radius: 50pc;">
+            <img src="{{product.product_image.url}}" alt="product images" style=" padding: 0px; align-content: center; border: solid; 
+           border-radius: 100pc; border-width: 1px; width: 100px; height: 100px ;
+          border-color: gold;">
+        </div>
+        <div>
+          <h2 style="color: white;">{{ product.name }}</h2>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<hr/>
+
+<div style="background-color: rgba(255, 255, 255, 0);">
+  <h4 class="pb-2 border-bottom" style="color: white; text-align: center;">OUR TEAM</h4>
+
+  <div class="container px-2 py-5" id="custom-cards">
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" >
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Samuel Kibuika</h2>
+            <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 5px; padding: 3px; text-align: center;">Founder and Chief Executive Officer</h6>
+            <ul class="d-flex list-unstyled mt-auto">
+              
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>Kibuika is an innovative and determined entrepreneur. He has led the company to remarkable success in the fabrication sector. 
+                </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Jonathan Kamau</h2>
+            <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 5px; padding: 3px; text-align: center;">founder & Technical Sales Director</h6>
+
+            <ul class="d-flex list-unstyled mt-auto">
+              
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small> A profound business man with a great vission for growth. Jonathan is an experiensed developer ,designer and skilled fabricator as well </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">John K</h2>
+            <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 5px; padding: 3px; text-align: center;">Human Recource Marketing Manager</h6>
+
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>A Graduate holding a bachelors Degree in Natural resource management,
+                   John k over sees the distribution of resources and tasks in our company.
+                </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Denis Githinji</h2>
+            <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 5px; padding: 3px; text-align: center;">Intern Engineer and Designer</h6>
+
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small> a master in perfection, precision and innovation</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+
+
+{% endblock %}
