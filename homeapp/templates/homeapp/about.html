@@ -76,20 +76,21 @@
 
   <div class="container px-2 py-5" id="custom-cards">
 
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" >
+    <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5" >
       
       {% for worker in workers %}
 
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('{{worker.worker_image.url}}'); 
         border-image-repeat: none; background-size: cover; background-repeat: no-repeat;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" >
-            <h2 class="pt-1 mt-5 mb-4 display-10 lh-1 fw-bold" style="background-color: rgba(0, 0, 0, 0.363);">{{ worker.name }}</h2>
+          
+          <div class="d-flex flex-column h-10 p-5 pb-1 text-white text-shadow-1" >
+            <h3 class="pt-1 mt-5 mb-4 display-10 lh-1 fw-bold" style="background-color: rgba(0, 0, 0, 0.363); border-radius: 5px; text-align: center;">{{ worker.name }}</h3>
             
             <ul class="d-flex list-unstyled mt-auto">
               
               <li class="d-flex align-items-center me-3">
-                <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 5px; padding: 3px; text-align: center;">{{ worker.position }}</h6>
+                <h6 style="background-color: black; color: gold; padding: 2px; border-radius: 0px; padding: 3px; text-align: center;">{{ worker.position }}</h6>
               </li>
               <li class="d-flex align-items-center">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
@@ -97,6 +98,7 @@
               </li>
             </ul>
           </div>
+
         </div>
       </div>
 
