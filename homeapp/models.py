@@ -32,3 +32,4 @@ class Worker(models.Model):
     worker_image = models.ImageField(upload_to='products_images/', default='default_image.jpg')
     def __str__(self):
         return self.name
+    
