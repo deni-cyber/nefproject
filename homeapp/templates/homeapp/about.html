@@ -10,9 +10,9 @@
     {% load static%}
 
   
-    <div style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
+    <div id="horizontalDiv" style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
       <card>
-      <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;" id="horizontalDiv">Background</h5>  
+      <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;" >Background</h5>  
 
         <p style="color: white;">In 2020, in Nairobi, Kenya, a group of skilled individuals founded "North Edge Fabricators Ltd."
           With a passion for metalwork and a commitment to quality and innovation, they crafted iconic structures and artwork. 
@@ -71,12 +71,12 @@
 
 <hr/>
 
-<div style="background-color: rgba(255, 255, 255, 0);">
+<div style="padding: 30px;">
   <h4 class="pb-2 border-bottom" style="color: white; text-align: center;">OUR TEAM</h4>
 
   <div class="container px-2 py-5" id="custom-cards">
 
-    <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5" >
+    <div class="row row-cols-2 row-cols-lg-3 align-items-stretch g-4 py-5" >
       
       {% for worker in workers %}
 
