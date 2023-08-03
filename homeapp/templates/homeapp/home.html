@@ -9,24 +9,24 @@
 
 {% load static %}
 
-<div  id="horizontalDiv">
 <section class="gradient-section"  style=" height: 600px; width: auto;">
-  <div >
+  <div id="horizontalDiv" style="text-align: center; flex: justify; word-wrap: break-word; background-color: rgba(0, 0, 0, 0.507);">
       <h1 style="font-weight: bolder; font-family: 'Times New Roman', Times, serif; color: orangered ; border: 1; text-shadow: 
       -1px -1px 0 white,  /* Top-left border */
       1px -1px 0 white,   /* Top-right border */
       -1px 1px 0 white,   /* Bottom-left border */
-      1px 1px 0 white;    /* Bottom-right border */ font-size: 72px;">NORTH EDGE FABRICATORS LTD</h1>
-    <p style="font-weight: bold;color: white; font-size: 32px; margin: 50px; font-family: Segoe Print; background-color: rgba(0, 0, 0, 0.507); border-radius: 5px;">building visionary solutions</p>
+      1px 1px 0 white;    /* Bottom-right border */ font-size: 72px; word-wrap: break-word;">NORTH EDGE FABRICATORS LTD</h1>
+    <p id="verticalDiv" style="font-weight: bold;color: white; font-size: 22px; margin: 50px; font-family: Segoe Print; background-color: rgba(0, 0, 0, 0.507); border-radius: 5px;">
+      Building Visionary Solutions
+    </p>
   </div>
 
 </section>
-</div>
 
 
   <section id="bgimg" >
       
-      <div style=" border-radius: 5px; margin: 100px; padding: 20px; background-color:  rgba(0, 0, 255, 0.527);">
+      <div style="border-radius: 5px; margin: 100px; padding: 20px; background-color:  rgba(0, 0, 255, 0.527);">
         <h2 style="color:white; font-weight: bold; font-family: Verdana;
             text-align:center ;margin-right: 5px; margin-bottom: 10px;">We Are Professional Fabricators
         </h2>
@@ -54,50 +54,52 @@
   </section>
 
   <section id="services">
-    <h3 id="animatedDiv" style="text-align: centre; font-weight: bold ; color: white;">Products & Services</h3>
+    <div >
+      <h3 style="text-align: centre; font-weight: bold ; color: white; background-color: rgba(0, 0, 0, 0.473);">Products & Services</h3>
 
-    
-      <div class="row"  style="border: solid; border-width: 1px; border-radius: 5px; border-color: rgba(255, 255, 255, 0); background-color: rgba(30, 30, 109, 0); padding: 15px;">
+      
+        <div class="row"  style="border: solid; border-width: 1px; border-radius: 5px; border-color: rgba(255, 255, 255, 0); background-color: rgba(30, 30, 109, 0); padding: 15px;">
 
-        <div class="column-1" style="background-color: rgba(0, 0, 255, 0.507); border-radius: 5px; text-align: left; padding: 20px;">
-            <!-- Content for the first column goes here -->
-            <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">Services</h5>
+          <div class="column-1" style="background-color: rgba(0, 0, 255, 0.507); border-radius: 5px; text-align: left; padding: 20px;">
+              <!-- Content for the first column goes here -->
+              <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">Services</h5>
+              
+              1. Custom Metal Fabrication <br/>
+              2. Sheet Metal Fabrication <br/>
+              3. Welding and Assembly <br/>
+              4. Powder Coating and Finishing <br/>
+              5. Prototyping <br/>
+              6. Installation and On-Site Services <br/>
+                          
+          </div>
+          <div class="column-2" style="background-color: rgba(0, 0, 255, 0.507);  border-radius: 5px; text-align: left; padding: 20px;">
+              <!-- Content for the second column goes here -->
+              <h5 style="text-align: center; color: white; font-weight: bold;">Products</h5>
+
+              1. Metal Structures and Frameworks <br/>
+              2. Custom Metal Parts and Components <br/>
+              3. Sheet Metal Enclosures and Cabinets <br/>
+              4. Architectural Metalwork <br/>
+              5. Custom Signage and Displays <br/>
+              6. Equipment and Machinery <br/>
+              7. Structural Steel Fabrication <br/>
+              8. Metal Furniture and Fixtures <br/>
+              9. Industrial Pipework and Ductwork <br/>
+
+          </div>
+
+          <div class="column-4" style="background-color: rgba(0, 0, 255, 0.507);  border-radius: 5px; text-align: left; padding: 20px;">
+              <a href="{% url 'projects' %}">
+                <button  class="hover-button">
             
-            1. Custom Metal Fabrication <br/>
-            2. Sheet Metal Fabrication <br/>
-            3. Welding and Assembly <br/>
-            4. Powder Coating and Finishing <br/>
-            5. Prototyping <br/>
-            6. Installation and On-Site Services <br/>
-                        
-        </div>
-        <div class="column-2" style="background-color: rgba(0, 0, 255, 0.507);  border-radius: 5px; text-align: left; padding: 20px;">
-            <!-- Content for the second column goes here -->
-            <h5 style="text-align: center; color: white; font-weight: bold;">Products</h5>
-
-            1. Metal Structures and Frameworks <br/>
-            2. Custom Metal Parts and Components <br/>
-            3. Sheet Metal Enclosures and Cabinets <br/>
-            4. Architectural Metalwork <br/>
-            5. Custom Signage and Displays <br/>
-            6. Equipment and Machinery <br/>
-            7. Structural Steel Fabrication <br/>
-            8. Metal Furniture and Fixtures <br/>
-            9. Industrial Pipework and Ductwork <br/>
-
-        </div>
-
-        <div class="column-4" style="background-color: rgba(0, 0, 255, 0.507);  border-radius: 5px; text-align: left; padding: 20px;">
-            <a href="{% url 'projects' %}">
-              <button class="hover-button">
-          
-              <img src="{% static 'homeapp/images/project_icon.jpg' %}" style="border: solid; border-color:white;
-               padding: 5px; border-radius: 30px; width: 60px; height:60px ; border-width: 2px;"alt="My Image" >
-              Our Projects >
-              </button>
-            </a>
-        </div>
-      </div> 
+                <img src="{% static 'homeapp/images/project_icon.jpg' %}" style="border: solid; border-color:white;
+                padding: 5px; border-radius: 30px; width: 60px; height:60px ; border-width: 2px;"alt="My Image" >
+                Our Projects >
+                </button>
+              </a>
+          </div>
+        </div> 
+    </div>
   </section>
 
 <section class="gradient-section" id="contact" style="padding: 20px; text-align: center;">

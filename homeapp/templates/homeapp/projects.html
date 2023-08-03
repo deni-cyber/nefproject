@@ -8,7 +8,7 @@
 {% block content %}
       <h1 style="text-align: center;" id="horizontalDiv">projects</h1>
       {% for project in projects %}
-      <div class="row g-0  position-relative" style="border: solid; border-radius: 5px; background-color: rgba(255, 68, 0, 0); border-width: 1px; border-color: rgb(255, 255, 255); margin: 10px;">
+      <div id="verticalDiv" class="row g-0  position-relative" style="border: solid; border-radius: 5px; background-color: rgba(255, 68, 0, 0); border-width: 1px; border-color: rgb(255, 255, 255); margin: 10px;">
         <div class="col-md-3 mb-md-0 p-md-4">
           <img src="{{project.project_image.url}}" alt="project images" style=" padding: 0px; align-content: center; border: solid; 
           border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 300px; height:300px ; border-color: orangered;">

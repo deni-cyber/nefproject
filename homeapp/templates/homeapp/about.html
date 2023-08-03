@@ -10,7 +10,7 @@
     {% load static%}
 
   
-    <div id="horizontalDiv" style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
+    <div id="verticalDiv" style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
       <card>
       <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;" >Background</h5>  
 
@@ -50,7 +50,7 @@
 <section style=" margin: 10px; padding: 20px; border-radius: 5px; ">
   <h2 class="pb-2 border-bottom" style="color: white; text-align: center;"> PRODUCTS </h2>
 
-  <div class="container px-4 py-5" id="hanging-icons">
+  <div id="horizontalDiv" class="container px-4 py-5" id="hanging-icons">
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" >
       {% for product in products %}
       <div class="col d-flex align-items-start" >
