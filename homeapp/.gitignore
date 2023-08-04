@@ -10,7 +10,7 @@ db.sqlite3
 
 # Ignore media and static files (if you use collectstatic)
 media/
-static/
+
 
 # Ignore virtual environment files
 venv/
