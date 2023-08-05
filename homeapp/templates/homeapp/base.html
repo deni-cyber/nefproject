@@ -11,6 +11,161 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
     <style>
+      /* Reset default styles for the list */
+              ul {
+                  list-style-type: none;
+                  margin-left: 30;
+                  padding: 10;
+                  background-image: linear-gradient(to  right ,orangered, blue);
+                  overflow: hidden;
+                  
+              }
+
+              /* Style the individual menu items */
+              li {
+                  float: left;
+                  
+              }
+
+              /* Style the links within the menu items */
+              li a {
+                  display: block;
+                  color: white;
+                  text-align: right;
+                  padding: 5px 5px;
+                  text-decoration: none;
+                  margin-right: 10;
+                  font-size: large;
+              }
+
+              /* Change color on hover */
+              li a:hover {
+                  background-color: white;
+                  color: orangered;
+                  
+              }
+
+
+              a button:hover{
+                  background-color: black;
+
+              }
+
+              /* Center the header */
+              header {
+                  text-align: center;
+                  background-color: white;
+                  color: orangered;
+                  padding-right: 100px;
+                  padding-left: 0px;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  border-bottom : 1px rgb(255, 255, 255) solid;
+                  border-radius: 10px;
+              }
+
+              #logo{
+                  height: 100px;
+                  width: 100px;
+              }
+
+
+
+              #about{
+                  background-image:white url("homeapp/images/bgnd.jpg") no-repat;
+                  text-align: center;
+                  text-decoration: wavy;
+                  font-weight: 500;
+                  font-family: Segoe Print;
+                  color: white;
+                  padding: 30px;
+              }
+
+              .container {
+                  display: flex;
+                  justify-content: space-between; /* Distribute columns evenly */
+                  gap: 5px; /* Gap between columns */
+              }
+
+              .column {
+                  flex: 1; /* Distribute available space evenly among columns */
+              }
+
+              h1{
+                  color: white;
+
+              }
+
+              p{
+                  color: black;
+              }
+
+              card{
+                  padding: 10px;
+                  flex: content;
+                  margin: 5px;
+                  
+              }
+
+              body{
+                  background-color: rgb(0, 0, 0);
+              }
+
+              .image-container {
+                  position: relative;
+                  display: inline-block; /* or display: block; if you want the container to take full width */
+              }
+
+              .image-text {
+                  position: absolute;
+                  top: 50%; /* Adjust the value to vertically center the text */
+                  left: 50%; /* Adjust the value to horizontally center the text */
+                  transform: translate(-50%, -50%);
+                  color: orangered; /* Customize the text color */
+                  font-size: 20px; /* Customize the font size */
+                  background-color: rgb(29, 25, 25);
+                  /* You can add more CSS styles to customize the text appearance */
+              }
+
+              .image-grid {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between; /* Adjust alignment as needed */
+                  gap: 10px; /* Adjust the gap between images as needed */
+              }
+
+              .image-grid img {
+                  flex: 0 0 calc(33.33% - 10px); /* Adjust the image width as needed */
+                  max-width: 100%;
+                  height: auto;
+              }
+
+              a button{
+                  padding-left: 5px;
+                  padding-right: 35px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  border-radius: 50pc; 
+                  margin-top: 15px;
+                  margin-bottom: 0px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40; 
+                  border: none;
+                  color: white; 
+                  font-weight: bold; 
+                  background-image: linear-gradient(to bottom left ,blue, orangered);
+              }
+
+              /* Normal button styles */
+              .hover-button {
+                  color: white;
+                  transition: background-color 5.3s ease;
+                }
+                
+                /* Button styles on hover */
+              .hover-button:hover {
+                  background-image: linear-gradient(to bottom left ,blue, rgb(0, 0, 0));
+                  border-color: rgb(0, 0, 0);
+                }
       body {
         /*background-image: url("{% static 'images/bgnd3.jpg' %}"); */
         background-image: linear-gradient(to top left , blue, orangered);
