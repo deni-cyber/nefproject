@@ -6,15 +6,16 @@
 
 
 {% block content %}
-      <h1 style="text-align: center;" id="verticalDiv">projects</h1>
-      <div id="horizontalDiv" >
+      <h1 style="text-align: center;" id="horizontalDiv">projects</h1>
+      <hr style="border: solid; border-top: 0px white; width: 50%; margin: 30px auto; color: white; width: 1000px; border-width: 1px;">
+      <div>
       {% for project in projects %}
       <div  class="row g-0  position-relative" style="border: solid; border-radius: 5px; background-color: rgba(255, 68, 0, 0); border-width: 1px; border-color: rgb(255, 255, 255); margin: 10px;">
         <div class="col-md-3 mb-md-0 p-md-4">
           <img src="{{project.project_image.url}}" alt="project images" style="padding: 0px; align-content: center; border: solid; 
           border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 300px; height:300px ; border-color: orangered;">
         </div>
-        <div class="col-md-8 p-4 ps-md-0 bg-light">
+        <div class="col-md-8 p-4 ps-md-2 bg-light">
           <h5 class="mt-0" style="color: orangered;">{{ project.name }}</h5>
           <p>{{ project.description }}</p>
           <!--<a href="#" class="stretched-link">Go somewhere</a>-->
