@@ -256,7 +256,64 @@
         background-size: cover;
       }
 
-        
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .header {
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to  right ,orangered, blue);
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      display: none;
+    }
+
+    .navbar.active {
+      display: flex;
+    }
+
+    .navbar a {
+      padding: 10px 0;
+      display: block;
+      text-align: center;
+    }
+
+    .menu-icon {
+      display: block;
+      text-align: right;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
 
     </style>
 
@@ -267,20 +324,20 @@
       <div >
       <a class="navbar-brand" href="{% url 'home' %}" >
         {% load static %}
-        <img id="logo" src="{% static 'homeapp/images/logo.png' %}" alt="My Image">
       </a>
     </div>
-        <div style="text-align: center;  margin-left: 0px; margin-right: 0px; align-items: center;">
-            
-                <ul >
-                    <li>
-                      
-                    </li>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'projects' %}">Projects</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                </ul>
+        
+        <div class="header">
+          <img id="logo" src="{% static 'homeapp/images/logo.png' %}" alt="My Image">
+        </div>
+        <div class="menu-icon" onclick="toggleNavbar()">
+          <span>&#9776;</span> <!-- Hamburger icon -->
+        </div>
+        <div class="navbar">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'projects' %}">Projects</a>
+          <a href="{% url 'contact' %}">Contact</a>
 
         </div>
     </header>
@@ -320,6 +377,13 @@
 
     const verticalObserver = new IntersectionObserver(animateOnScroll, observerOptions);
     verticalObserver.observe(verticalDiv);
+
+    function toggleNavbar() {
+      var navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    
+    }
+
   </script>
 
 <!-- Footer -->
