@@ -4,8 +4,9 @@ from django.template import loader
 from homeapp.models import Project, Service, Product,Worker
 
 def home_view(request):
+    products=Product.objects.all()
     services = Service.objects.all()
-    context = {'projects': services}
+    context = {'services':services,'products':products}
     return render(request, 'homeapp/home.html', context)
 
 def about_view(request):
