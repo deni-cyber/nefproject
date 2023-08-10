@@ -16,6 +16,18 @@ def about_view(request):
     template = loader.get_template('homeapp/about.html')
     context = {'services':services,'products':products,'workers':workers}
     return HttpResponse(template.render(context, request))
+
+def products_view(request):
+    products=Product.objects.all()
+    template = loader.get_template('products/about.html')
+    context = {'products':products}
+    return HttpResponse(template.render(context, request))
+
+def services_view(request):
+    services=Service.objects.all()
+    template = loader.get_template('services/about.html')
+    context = {'services':services}
+    return HttpResponse(template.render(context, request))
     
 def projects_view(request):
     projects = Project.objects.all()
