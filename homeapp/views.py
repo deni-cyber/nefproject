@@ -19,13 +19,13 @@ def about_view(request):
 
 def products_view(request):
     products=Product.objects.all()
-    template = loader.get_template('products/about.html')
+    template = loader.get_template('homeapp/products.html')
     context = {'products':products}
     return HttpResponse(template.render(context, request))
 
 def services_view(request):
     services=Service.objects.all()
-    template = loader.get_template('services/about.html')
+    template = loader.get_template('homeapp/services.html')
     context = {'services':services}
     return HttpResponse(template.render(context, request))
     

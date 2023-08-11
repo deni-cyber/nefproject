@@ -1,0 +1,36 @@
+{% extends 'homeapp/base.html' %}
+
+{% block title %}North Edge Fabricators - About {% endblock %}
+
+{% block theme %}theme1{% endblock %}
+
+
+{% block content %}
+
+    {% load static%}
+
+  
+<section style="margin: 10px; padding: 20px; border-radius: 5px; ">
+
+    <h2 id="horizontalDiv" class="pb-2 border-bottom" style="color: white; text-align: center;">OUR SERVICES</h2>
+
+<div class="container px-4 py-5" id="featured-3" >
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" >
+    {% for service in services %}
+    <div class="feature col">
+      <div class="feature-icon ">
+          <img src="{{service.service_image.url}}" alt="service images" style=" padding: 0px; align-content: center; border: solid; 
+          border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 300px; height:300px ;
+          border-color: rgb(255, 255, 255);">
+      </div>
+      <h2 style="color: gold;">{{ service.name }}</h2>
+      <p style="color: white;" >{{ service.description }}</p>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+</section>
+{% endblock %}

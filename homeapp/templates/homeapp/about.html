@@ -36,7 +36,7 @@
             border-color: rgb(255, 255, 255);">
         </div>
         <h2 style="color: gold;">{{ service.name }}</h2>
-        <p style="color: white;" >{{ service.description }}</p>
+        <!--<p style="color: white;" >{{ service.description }}</p> -->
 
       </div>
       {% endfor %}
@@ -46,27 +46,31 @@
 
   </section>
 
-<section style=" margin: 10px; padding: 20px; border-radius: 5px; ">
+  <section style="margin: 10px; padding: 20px; border-radius: 5px; ">
+
   <h2 class="pb-2 border-bottom" style="color: white; text-align: center;"> PRODUCTS </h2>
 
-  <div  class="container px-4 py-5" id="hanging-icons">
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" >
-      {% for product in products %}
-      <div class="col d-flex align-items-start" >
-        <div class="icon-square bg-light text-dark flex-shrink-0 me-3" style="border-radius: 50pc;">
-            <img src="{{product.product_image.url}}" alt="product images" style=" padding: 0px; align-content: center; border: solid; 
-           border-radius: 100pc; border-width: 1px; width: 100px; height: 100px ;
-          border-color: gold;">
-        </div>
-        <div>
-          <h2 style="color: white;">{{ product.name }}</h2>
-          <p>{{ product.description }}</p>
-        </div>
+<div class="container px-4 py-5" id="featured-3" >
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" >
+    {% for product in products %}
+    <div class="feature col">
+      <div class="feature-icon ">
+          <img src="{{product.product_image.url}}" alt="service images" style=" padding: 0px; align-content: center; border: solid; 
+          border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 300px; height:300px ;
+          border-color: rgb(255, 255, 255);">
       </div>
-      {% endfor %}
+      <h2 style="color: white;">{{ product.name }}</h2>
+      <!--<p style="color: white;" >{{ service.description }}</p> -->
+
     </div>
+    {% endfor %}
   </div>
+
+</div>
+
 </section>
+
+
 
 <hr/>
 
@@ -93,7 +97,7 @@
               </li>
               <li class="d-flex align-items-center">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small> {{ worker.description }} </small>
+                <small style="background-color: rgba(255, 68, 0, 0.582);"> {{ worker.description }} </small>
               </li>
             </ul>
           </div>
