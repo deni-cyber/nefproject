@@ -2,8 +2,6 @@
 <html>
     {% load static %}
 <head>
-    <link rel="stylesheet" href="{% static 'homeapp/css/style.css' %}">
-    <script src="{% static 'homeapp/script.js' %}"></script>
 
     <title>{% block title %}NEF ltd{% endblock %}</title>
 
@@ -28,7 +26,6 @@
                   height: 50px;
                   width: 50px;
               }
-
 
 
               #about{
@@ -145,7 +142,7 @@
 
 
       section{
-        background-image: linear-gradient(to top right  , orangered, blue);
+        background-image: linear-gradient(to top right  , orangered, rgba(0, 0, 255, 0.671));
         /*background-color: white;*/
         counter-reset: white;
         margin: 0px;
@@ -284,6 +281,16 @@
       padding: 10px;
       cursor: pointer;
     }
+  }
+
+/* center container class*/
+  .center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    padding: 20px;
   }
 
     </style>

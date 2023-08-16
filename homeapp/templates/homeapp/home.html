@@ -65,19 +65,22 @@
     {% endfor %}
 
   </div>
-<div id="slideshow-container" style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
+
+<!--
+<div class="center-container" id="slideshow-container" >
 
   {% for service in services %}
-    <card>
+    
         <img class="slideshow-image"style=" padding: 0px; align-content: center; border: solid; 
         border-radius: 1px; border-width: 1px; width: 400px; height: 400px ;
        border-color: white;" 
         src="{{service.service_image.url}}" alt="image">
 
-      </card>
     {% endfor %}
 
 </div>
+
+-->
 
 <script src="{% static '/homeapp/js/slideshow.js' %}"></script>
 
