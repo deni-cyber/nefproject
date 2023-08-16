@@ -9,7 +9,7 @@ local_settings.py
 db.sqlite3
 
 # Ignore media and static files (if you use collectstatic)
-media/
+
 
 
 # Ignore virtual environment files
