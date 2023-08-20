@@ -3,8 +3,7 @@
 __pycache__/
 
 # Ignore local development settings
-local_settings.py
-
+settings/
 # Ignore database files
 
 # Ignore media and static files (if you use collectstatic)
