@@ -38,6 +38,8 @@
 
 @media (max-width: 600px) {
     .caption{
+        top: 0;
+        right: 0;
         width: 50%; /* Adjust font size for smaller screens */
     }
     
