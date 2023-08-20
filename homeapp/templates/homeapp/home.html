@@ -60,10 +60,10 @@
                         7. Structural Steel Fabrication <br/>
                         8. Metal Furniture and Fixtures <br/>
                         9. Industrial Pipework and Ductwork <br/>
-                        <a> <button class="linkButton">See More →</button> </a>
                     </p>
                 </div>
             </div> 
+            
 
         </div>
         <section class="responsive-section2">
@@ -74,6 +74,8 @@
                 {% endfor %}
                 
             </div>
+            <a> <button class="linkButton">See More →</button> </a>
+
         </section>
     </div>
 </section>
@@ -83,29 +85,8 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-5 ">
-                <h3>Recent Projects</h3>
-                <div class="slideshow-container2">
-                    {% for project in projects %}
-
-                    <div class="slide2">
-                        <img src="{{project.project_image.url}}" alt="Image 1">
-                        <div class="slide-title">{{project.name}}</div>
-                    </div>
-                    
-
-                    {% endfor %}
-
-                    <div class="scroll-buttons2">
-                        <button class="prev-button" onclick="prevSlide()">&#10094;</button>
-                        <button class="next-button" onclick="nextSlide()">&#10095;</button>
-                    </div>
-
-
-                </div>
-            </div>
-            
             <div class="col-md-7 aboutdiv">
+                <h1>How we do it</h1>
                 <P>
                     At North Edge Fabricators Ltd,
                      the management of fabrication projects involves a systematic approach 
@@ -128,26 +109,50 @@
                 </P>
                 <a> <button class="linkButton">Explore Projects →</button> </a>
             </div>  
+
+            <div class="col-md-5 ">
+                <h3>Recent Projects</h3>
+                <div class="slideshow-container2">
+                    {% for project in projects %}
+
+                    <div class="slide2">
+                        <img src="{{project.project_image.url}}" alt="Image 1">
+                        <div class="slide-title">{{project.name}}</div>
+                    </div>
+                    
+
+                    {% endfor %}
+
+                    <div class="scroll-buttons2">
+                        <button class="prev-button" onclick="prevSlide()">&#10094;</button>
+                        <button class="next-button" onclick="nextSlide()">&#10095;</button>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
           
     </div>
 </section>
 <section class="responsive-section">
     <div class="row">
-        <div class="col-md-4">
-            <h3 >Reach out to us</h3>
-
-                <p>Nairobi- </p><br/>
-
-                <p>info@example.com</p><br/>
-
-                <p>(123) 456-7890</p><br/>
-
-            
-
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <h3>Our Services</h3>
+
+            <div class="slideshow-container">
+                        
+                {% for service in services %}
+                <div class="slide">
+                    <img src="{{service.service_image.url}}" alt="Image 1">
+                    <div class="caption">
+                        <h4>{{service.name}}</h4>
+                        <p>{{service.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
             <p class="listP2">
                 1. Custom Metal Fabrication<br/>
                 2. Sheet Metal Fabrication<br/>
@@ -157,25 +162,25 @@
                 6. Installation and On-Site Services<br/>
 
             </p>
+        </div>
+        <div class="col-md-5">
+            <h3  class="boldh1">Reach out to us</h3>
+            
+
+                <p>     <img src="{% static 'images/location.png' %}" alt="location Image">
+                    Nairobi-Kariobangi light industries.</p><br/>
+
+                <p>    <img src="{% static 'images/email.png' %}" alt="location Image">
+                    northedgefabricators@gmail.com</p><br/>
+
+                <p>    <img src="{% static 'images/call.png' %}" alt="location Image">
+                    +254 721 394 475 / +254 723 853 275 <br/>
+                </p>
+            
 
         </div>
                 
-        <div class="col-md-3">
-            <div class="slideshow-container">
-                        
-                {% for service in services %}
-                <div class="slide">
-                    <img src="{{service.service_image.url}}" alt="Image 1">
-                    <div class="caption">
-                        <h4>{{service.name}}</h4>
-                        <!--<p>{{product.description}}</p>-->
-                    </div>
-                </div>
-                {% endfor %}
 
-
-            </div>
-        </div>
 
     </div>
 </section>

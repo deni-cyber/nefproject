@@ -5,8 +5,16 @@ footer {
     color: white;
 }
 
+/* Reset some default margin/padding */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
 
-
+p{
+    color: white;
+    font-weight: 700;
+}
 
 .jumbotron {
     color: white;
@@ -280,11 +288,7 @@ footer {
     }
 }
 
-/* Reset some default margin/padding */
-body, h1 {
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Center align the content */
 .image-section {
@@ -306,8 +310,4 @@ body, h1 {
         height: 100px; /* Maintain aspect ratio */
     }
     
-}
-
-.h1align{
-    text-align: center;
 }
