@@ -1,0 +1,237 @@
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #343a40;
+    color: white;
+}
+
+
+.jumbotron {
+    background-size: cover; /* This ensures the image covers the entire element */
+    color: white;
+    text-align: center;
+}
+  
+.jumbotron h1{
+    text-align: center;
+    font-weight: bolder;
+    color: orangered;
+    font-family: 'Times New Roman', Times, serif; 
+    border: 1; text-shadow: -1px -1px 0 white,  /* Top-left border */1px -1px 0 white,   /* Top-right border */-1px 1px 0 white,   /* Bottom-left border */1px 1px 0 white;    /* Bottom-right border */ 
+    font-size: 102px; 
+    word-wrap: break-word;
+}
+
+.jumbotron p{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    word-wrap: break-word;
+}
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+    .jumbotron h1{
+        font-size: 340%; /* Adjust font size for smaller screens */
+    }
+    .jumbotron p{
+        font-size: 100%; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .jumbotron h1{
+        font-size: 300%; /* Adjust font size for smaller screens */
+    }
+    .jumbotron p{
+        font-size: 90%; /* Adjust font size for smaller screens */
+    }
+}
+
+
+.image-container {
+    position: relative; /* Create a positioning context for absolute positioning */
+}
+
+.image-container img {
+    color: black;
+    
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Position the text at the vertical center of the container */
+    left: 50%; /* Position the text at the horizontal center of the container */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    background-color: rgba(0, 0, 0, 0.24); /* Semi-transparent background */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Default styles for the responsive section */
+.responsive-section {
+    padding: 20px;
+    background-color: orangered;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .responsive-section {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+.responsive-section2 {
+    padding: 20px;
+    background-color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .responsive-section2 {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+
+/* Button styles */
+.scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    opacity: 0.7;
+    z-index: 9999;
+    animation: blink 2s infinite;
+}
+
+/* Arrow icon styles */
+.arrow-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.linkButton{
+    background-color: rgba(255, 68, 0, 0.911);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius:0px;
+    cursor: hand;
+}
+
+.linkButton:hover{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius:0px;
+}
+
+
+.listP{
+    color: orangered;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pdiv{
+    background-color: white;
+    padding: 10px;
+}
+
+.pdiv h4{
+    color: orangered;
+    padding: 10px;
+    font-size: xx-large;
+}
+.aboutdiv{
+    background-color: black;
+    padding: 10px;
+    color: white ;
+    padding: 20px;
+}
+
+
+/* Slideshow container */
+.slideshow-container2 {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slide styles */
+.slide2 {
+    display: none;
+    animation: slide 15s infinite;
+}
+
+.slide2 img{
+    height: 400px;
+    width: 400px;
+}
+
+/* Scroll button styles */
+.scroll-buttons2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prev-button, .next-button {
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: hand;
+}
+
+/* Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+/* Slide title styles */
+.slide-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #000000;
+    width: 70%;
+}
+
+.boldh1{
+    font-size: 42px;
+    color: white;
+
+}
+@media (max-width: 600px) {
+    .boldh1{
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}

@@ -7,31 +7,11 @@
 
 {% block content %}
 
-    {% load static%}
-
-<div  style="border: solid; border-width: 1px; border-color: white; border-radius: 5px; margin: 50px; padding: 20px; background-color: rgba(255, 255, 255, 0);">
+{% load static %}
 
 
 <h2 id="horizontalDiv" class="pb-2 border-bottom" style="color: white; text-align: center;">OUR SERVICES</h2>
 
-<div class="container px-4 py-5" id="featured-3" >
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-2" >
-    {% for service in services %}
-    <div class="feature col">
-      <div class="feature-icon ">
-          <img src="{{service.service_image.url}}" alt="service images" style=" padding: 0px; align-content: center; border: solid; 
-          border-left: 0px ; border-top: 0px; border-bottom: 0px; border-radius: 5px; border-width: 1px; width: 400px; height:400px ;
-          border-color: rgb(255, 255, 255);">
-      </div>
-      <h2 style="color: gold;">{{ service.name }}</h2>
-      <p style="color: white;" >{{ service.description }}</p>
 
-    </div>
-    {% endfor %}
-  </div>
-
-</div>
-
-</div>
 
 {% endblock %}
