@@ -80,61 +80,6 @@
     </div>
 </section>
 
-
-<section class="responsive-section2">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-7 aboutdiv">
-                <h1>How we do it</h1>
-                <P>
-                    At North Edge Fabricators Ltd,
-                     the management of fabrication projects involves a systematic approach 
-                     to delivering high-quality products and structures. 
-                     Beginning with project initiation, the company collaborates with clients 
-                     to define project goals, scope, and specifications. Comprehensive research 
-                     and planning ensure efficient material sourcing, allocation of resources, 
-                     and adherence to safety regulations. During the design phase, engineers and 
-                     designers create detailed plans, blueprints, and 3D models to guide the 
-                     fabrication process. Skilled technicians then execute the fabrication using 
-                     cutting-edge machinery and techniques, closely adhering to established industry 
-                     standards. Rigorous quality control checks are conducted at each stage to ensure 
-                     precision, durability, and compliance with specifications. Upon completion, the 
-                     fabricated product undergoes thorough inspections before being delivered and 
-                     installed on-site. Effective communication channels are maintained throughout 
-                     the project lifecycle to address any changes or concerns promptly. 
-                     By prioritizing client collaboration, meticulous craftsmanship, 
-                     and a commitment to excellence, North Edge Fabricators Ltd consistently 
-                     delivers successful fabrication projects tailored to the unique needs of each client.
-                </P>
-                <a> <button class="linkButton">Explore Projects →</button> </a>
-            </div>  
-
-            <div class="col-md-5 ">
-                <h3>Recent Projects</h3>
-                <div class="slideshow-container2">
-                    {% for project in projects %}
-
-                    <div class="slide2">
-                        <img src="{{project.project_image.url}}" alt="Image 1">
-                        <div class="slide-title">{{project.name}}</div>
-                    </div>
-                    
-
-                    {% endfor %}
-
-                    <div class="scroll-buttons2">
-                        <button class="prev-button" onclick="prevSlide()">&#10094;</button>
-                        <button class="next-button" onclick="nextSlide()">&#10095;</button>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-          
-    </div>
-</section>
 <section class="responsive-section">
     <div class="row">
         <div class="col-md-5">
@@ -187,6 +132,63 @@
 
     </div>
 </section>
+
+<section class="responsive-section2">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-7 aboutdiv">
+                <h1>How we do it</h1>
+                <P>
+                    At North Edge Fabricators Ltd,
+                     the management of fabrication projects involves a systematic approach 
+                     to delivering high-quality products and structures. 
+                     Beginning with project initiation, the company collaborates with clients 
+                     to define project goals, scope, and specifications. Comprehensive research 
+                     and planning ensure efficient material sourcing, allocation of resources, 
+                     and adherence to safety regulations. During the design phase, engineers and 
+                     designers create detailed plans, blueprints, and 3D models to guide the 
+                     fabrication process. Skilled technicians then execute the fabrication using 
+                     cutting-edge machinery and techniques, closely adhering to established industry 
+                     standards. Rigorous quality control checks are conducted at each stage to ensure 
+                     precision, durability, and compliance with specifications. Upon completion, the 
+                     fabricated product undergoes thorough inspections before being delivered and 
+                     installed on-site. Effective communication channels are maintained throughout 
+                     the project lifecycle to address any changes or concerns promptly. 
+                     By prioritizing client collaboration, meticulous craftsmanship, 
+                     and a commitment to excellence, North Edge Fabricators Ltd consistently 
+                     delivers successful fabrication projects tailored to the unique needs of each client.
+                </P>
+                
+            </div>  
+
+            <div class="col-md-5 ">
+                <h3>Recent Projects</h3>
+                <div class="slideshow-container2">
+                    {% for project in projects %}
+
+                    <div class="slide2">
+                        <img src="{{project.project_image.url}}" alt="Image 1">
+                        <div class="slide-title">{{project.name}}</div>
+                    </div>
+                    
+
+                    {% endfor %}
+
+                    <div class="scroll-buttons2">
+                        <button class="prev-button" onclick="prevSlide()">&#10094;</button>
+                        <button class="next-button" onclick="nextSlide()">&#10095;</button>
+                    </div>
+
+
+                </div>
+                <a> <button class="linkButton">Explore Projects →</button> </a>
+            </div>
+        </div>
+          
+    </div>
+</section>
+
 
 
 {% endblock %}
