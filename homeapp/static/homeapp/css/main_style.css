@@ -49,7 +49,7 @@ p{
 
 @media (max-width: 600px) {
     .jumbotron h1{
-        font-size: 300%; /* Adjust font size for smaller screens */
+        font-size: 200%; /* Adjust font size for smaller screens */
     }
     .jumbotron p{
         font-size: 90%; /* Adjust font size for smaller screens */
@@ -250,7 +250,7 @@ p{
         transform: translateX(-10%);
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(10%);
     }
     
 }

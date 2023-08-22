@@ -52,8 +52,8 @@ function fadeIn(element) {
             clearInterval(timer);
         }
         element.style.opacity = opacity;
-        opacity += 0.03; // Adjust this value to control animation speed
-    }, 50); // Adjust this value to control animation smoothness
+        opacity += 0.05; // Adjust this value to control animation speed
+    }, 30); // Adjust this value to control animation smoothness
 }
 
 
