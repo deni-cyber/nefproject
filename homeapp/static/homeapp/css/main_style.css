@@ -40,6 +40,7 @@ p{
 /* Media query for smaller screens */
 @media (max-width: 1000px) {
     .jumbotron h1{
+        
         font-size: 340%; /* Adjust font size for smaller screens */
     }
     .jumbotron p{
@@ -89,6 +90,16 @@ p{
 @media (max-width: 768px) {
     .responsive-section {
         padding: 5px; /* Adjust padding for smaller screens */
+
+    }
+    .text-overlay {
+        position: absolute;
+        top: 50%; /* Position the text at the vertical center of the container */
+        left: 50%; /* Position the text at the horizontal center of the container */
+        transform: translate(-50%, -50%); /* Center the text precisely */
+        padding: 0px;
+        color: white;
+        text-align: center;
     }
 }
 
