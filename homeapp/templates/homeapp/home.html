@@ -77,7 +77,7 @@
 
 <section class="responsive-section">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-3">
             <h3>Our Services</h3>
 
             <div class="slideshow-container">
@@ -92,11 +92,16 @@
                 </div>
                 {% endfor %}
             </div>
+            <div>
+                <a> <button class="linkButton">Learn More →</button> </a>
+            </div>
+        </div>
+        <div class="col-md-4">
             {% for service in services %}
             <p class="listP2">{{service.name}}</p>
             {% endfor %}
         </div>
-        <div class="col-md-7 bg-dark">
+        <div class="col-md-5 bg-dark">
             <h3  class="boldh1">contact us now</h3>
             
 
