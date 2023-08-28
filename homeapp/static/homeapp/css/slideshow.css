@@ -18,8 +18,8 @@
 
 @media (max-width: 600px) {
     .slide img{
-        width: 400px; /* Adjust font size for smaller screens */
-        height: 400px;
+        width: 100%; /* Adjust font size for smaller screens */
+        height: 100%;
     }
     
 } 
