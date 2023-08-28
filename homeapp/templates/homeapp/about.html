@@ -2,12 +2,36 @@
 
 {% block title %}North Edge Fabricators - About {% endblock %}
 
-{% block theme %}theme1{% endblock %}
-
-{% load static %}
 
 {% block content %}
-
-      <h5 style="text-align: center; color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;" >Background</h5>  
-  
+{% load static %}
+<div class="container">
+      <section class="responsive-section">
+            <h1>About Us</h1>
+            <img src="{% static 'homeapp/images/logo.png' %}" alt="North Edge Fabricators Logo">
+            <p>Welcome to North Edge Fabricators, where innovation and quality craftsmanship converge to create exceptional solutions. With a rich history of serving diverse industries, we have established ourselves as leaders in the field.</p>
+            <p>Our dedicated team of experts brings a wealth of experience to every project. From precision metalwork to cutting-edge technology, we consistently deliver results that exceed expectations.</p>
+            <h2>Our Mission</h2>
+            <p>At North Edge Fabricators, our mission is to provide top-tier fabrication solutions that empower our clients' success. We pride ourselves on our commitment to quality, sustainability, and customer satisfaction.</p>
+            
+      </section>
+      
+      <h2>Our Services</h2>
+      <p>We offer a wide range of services, including:</p>
+      <ul>
+        <li>Metal Fabrication</li>
+        <li>Welding and Joining</li>
+        <li>CNC Machining</li>
+        <li>Custom Design</li>
+        <!-- Add more services here -->
+      </ul>
+      <h2>Our Team</h2>
+      <p>Meet the faces behind North Edge Fabricators:</p>
+      <img src="team-photo.jpg" alt="North Edge Fabricators Team">
+      <p>Our team of dedicated professionals is driven by a passion for excellence and a commitment to our clients' needs.</p>
+      <h2>Contact Us</h2>
+      <p>For inquiries or collaborations, get in touch:</p>
+      <p>Email: info@northedgefabricators.com</p>
+      <p>Phone: (123) 456-7890</p>
+</div>
 {% endblock %}
