@@ -188,10 +188,9 @@ body {
 
 .linkButton:hover{
     background-color: black;
-    color: white;
     padding: 5px;
-    border: none;
-    border-radius:0px;
+    border: solid;
+    border-color: white;
 }
 
 
@@ -321,6 +320,16 @@ body {
         padding: 20px;
         font-size: 8px;
         text-align: center;
+    }
+    .aboutdiv button{
+        background-color: #000;
+        font-size: large;
+    }
+    .linkButton:hover{
+        background-color: orangered;
+        padding: 5px;
+        border: solid;
+        border-color: white;
     }
 }
 
