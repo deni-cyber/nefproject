@@ -239,7 +239,7 @@ body {
 }
 @media (max-width: 768px) {
     .aboutdiv{
-        background-color: orangered;
+        background-color: black;
         padding: 10px;
         color: white ;
         padding: 20px;
@@ -315,11 +315,11 @@ body {
         max-width: 90%;
     }
     .aboutdiv{
-        background-color: black;
+        background-color: orangered;
         padding: 10px;
         color: white ;
         padding: 20px;
-        font-size: small;
+        font-size: 8px;
         text-align: center;
     }
 }
