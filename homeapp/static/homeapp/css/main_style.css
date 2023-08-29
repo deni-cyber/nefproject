@@ -239,11 +239,11 @@ body {
 }
 @media (max-width: 768px) {
     .aboutdiv{
-        background-color: black;
+        background-color: orangered;
         padding: 10px;
         color: white ;
         padding: 20px;
-        font-size: small;
+        font: size 10px;
         text-align: center;
     }
 }
