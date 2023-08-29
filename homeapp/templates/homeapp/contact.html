@@ -1,6 +1,6 @@
 {% extends 'homeapp/base.html' %}
 
-{% block title %}North Edge Fabricators - contucts {% endblock %}
+{% block title %}North Edge Fabricators - contact us {% endblock %}
 
 {% block theme %}theme1{% endblock %}
 
@@ -8,6 +8,52 @@
 
 {% block content %}
 
-    <h2 id="verticalDiv" style="font-weight: bolder; color: white; text-align: center ; padding: 50px;">Contact Us</h2>
+<main>
+        <div class="row container">
+            
+        </div>
+    <div class="map">
+        <!-- Embed Google Map here -->
+    </div>
+    <section class="responsive-section">
+        <div class="row container">
+            <div class="col-md-6 bg-dark">
+                <h6  class="boldh1">Contact us now</h6>
+                  
+      
+                      <p>     <img src="{% static 'images/location.png' %}" alt="location Image">
+                          Nairobi-Kariobangi light industries.</p><br/>
+      
+                      <p>     <img src="{% static 'images/pobox.png' %}" alt="location Image">
+                          P.O.Box 60870-00100, Nairobi</p><br/>
+      
+                      <p>    <img src="{% static 'images/email.png' %}" alt="location Image">
+                          northedgefabricators@gmail.com</p><br/>
+      
+                      <p>    <img src="{% static 'images/call.png' %}" alt="location Image">
+                          +254 721 394 475 / +254 723 853 275 <br/>
+                      </p>
+            </div>
+            <div class="col-md-6 contact-form">
+                <h1>Write to Us</h1>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
 
 {% endblock %}
