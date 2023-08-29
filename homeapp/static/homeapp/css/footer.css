@@ -44,3 +44,12 @@
     color: #ccc;
     font-size: 14px;
 }
+.footericon{
+    text-align: left;
+    color: white;
+}
+
+.footericon img {
+    width: 30px;
+    height: auto;
+}

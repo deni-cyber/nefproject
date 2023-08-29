@@ -22,21 +22,23 @@
 </section>
 
 
-<section class="responsive-section2 container aboutdiv ">
-      <h2>Our Team</h2>
+<section class="responsive-section2  aboutdiv ">
+      <div class="container">
+            <h2>Our Team</h2>
 
-      <p>Meet the faces behind North Edge Fabricators:</p>
-            <div class="team-section bg-dark">
-                  {% for worker in workers %}
-                  <div class="team-section">
+            <p>Meet the faces behind North Edge Fabricators:</p>
+                  <div class="team-section bg-dark">
+                        {% for worker in workers %}
+                        <div class="team-section">
 
-                        <div class="team-member">
-                        <img class="team-image" src="{{worker.worker_image.url}}" alt="Team Member 1">
-                        <div class="team-caption">{{ worker.name}}<br>{{worker.position}}</div>
-                        </div>           
-                  {% endfor %}
-            </div>
+                              <div class="team-member">
+                              <img class="team-image" src="{{worker.worker_image.url}}" alt="Team Member 1">
+                              <div class="team-caption">{{ worker.name}}<br>{{worker.position}}</div>
+                              </div>           
+                        {% endfor %}
+                  </div>
 
+      </div>
       <p>Our team of dedicated professionals is driven by a passion for excellence and a commitment to our clients' needs.</p>
 
 </section>
