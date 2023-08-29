@@ -32,7 +32,7 @@
         </p>
 
         <div>
-           <a> <button class="linkButton">Learn More →</button> </a>
+           <a  class="nav-link" href="{% url 'about' %}"> <button class="linkButton">Learn More →</button> </a>
         </div>
     
 </div>
@@ -46,7 +46,7 @@
                    <h1 class="boldh1"> PROUDLY MADE FOR OUR YOU </h1> 
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 ">
                 
                 <div class="pdiv">
                     <h4>Products</h4>
@@ -63,7 +63,7 @@
         </div>
         <section class="responsive-section2">
 
-            <div class="image-section">
+            <div class="image-section ">
                 {% for product in products %}
                 <img src="{{product.product_image.url}}" alt="product image">
                 {% endfor %}
@@ -75,7 +75,7 @@
     </div>
 </section>
 
-<section class="responsive-section">
+<section class="responsive-section container">
     <div class="row">
         <div class="col-md-4">
             <h3>Our Services</h3>
@@ -94,7 +94,7 @@
             </div>
             
         </div>
-        <div class="col-md-8 bg-dark">
+        <div class="col-md-8 bg-dark container">
             {% for service in services %}
             <p class="listP2">{{service.name}}</p>
             {% endfor %}

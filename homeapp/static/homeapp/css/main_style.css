@@ -16,6 +16,29 @@ p{
     font-weight: 700;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .jumbotron {
     color: white;
     text-align: center;
@@ -84,6 +107,8 @@ p{
     padding: 20px;
     background-color: orangered;
     min-height: 450px;
+
+    
 }
 
 /* Media query for smaller screens */
@@ -105,7 +130,7 @@ p{
 
 .responsive-section2 {
     padding: 20px;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
 }
 
 /* Media query for smaller screens */

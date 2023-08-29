@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,15 +14,20 @@
     <title>{% block title %}NEF ltd-home{% endblock %}</title>
 
     
-    <link rel="stylesheet" href="static/homeapp/css/main_style.css">
+   <!-- <link rel="stylesheet" href="static/homeapp/css/main_style.css"> 
     <link rel="stylesheet" href="static/homeapp/css/css_ids.css">
     <link rel="stylesheet" href="static/homeapp/css/slideshow.css">
     <link rel="stylesheet" href="static/homeapp/css/footer.css">
-    <link rel="stylesheet" href="static/homeapp/css/about.css">
+    <link rel="stylesheet" href="static/homeapp/css/about.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/main_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/css_ids.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/slideshow.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/about.css' %}">
 
 
 
-    {% load static %}
     <link rel="icon" type="image/png" href="{% static 'homeapp/images/logo.png' %}">
 
 
