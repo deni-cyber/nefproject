@@ -306,11 +306,17 @@ padding: 20px;
     color: white;
 
 }
+
+.displayproudimage{
+    width: 100%;
+    height:auto;
+}
+
+
 @media (max-width: 600px) {
     .boldh1{
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 28px; /* Adjust font size for smaller screens */
         text-align: center;
-        max-width: 90%;
     }
     .aboutdiv{
         background-color: orangered;
@@ -346,12 +352,23 @@ padding: 20px;
     width: 200px;
     border-radius: 2px;
 }
+.contact-icos{
+    width: 50px;
+    height: auto;
+}
 
 /* Adjust image size for smaller screens */
 @media screen and (max-width: 768px) {
     .image-section img {
         max-width: 100px; /* Make sure images don't exceed container width */
         height: 100px; /* Maintain aspect ratio */
+        gap: 5px;
+    }
+    .contact-icos{
+        width: 30px;
+        height: auto;
     }
     
 }
+
+

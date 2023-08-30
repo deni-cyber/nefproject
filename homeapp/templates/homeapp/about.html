@@ -8,7 +8,7 @@
 {% load static %}
 
 <section class=" responsive-section">
-      <div class="container aboutdiv ">
+      <div class="container aboutdiv bg-dark ">
             <div>
             <h2>About Us</h2>
                   <p>Welcome to North Edge Fabricators, where innovation and quality craftsmanship converge to create exceptional solutions. With a rich history of serving diverse industries, we have established ourselves as leaders in the field.</p>
@@ -23,11 +23,11 @@
 
 
 <section class="responsive-section">
-      <div class="container aboutdiv  ">
+      <div class="container aboutdiv bg-dark">
             <h2>Our Team</h2>
 
             <p>Meet the faces behind North Edge Fabricators:</p>
-                  <div class="team-section aboutdiv ">
+                  <div class="team-section aboutdiv  bg-dark">
                         {% for worker in workers %}
                               <div class="team-member">
                               <img class="team-image" src="{{worker.worker_image.url}}" alt="Team Member 1">
