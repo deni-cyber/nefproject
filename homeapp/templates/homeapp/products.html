@@ -8,6 +8,23 @@
 
 {% block content %}
 
-<h2 id="horizontalDiv" class="pb-2 border-bottom" style="color: white; text-align: center;"> PRODUCTS </h2>
- 
+    <header>
+        <h1>Similar Products</h1>
+    </header>
+    
+    <section class="products-container">
+
+        {% for product in products %}
+
+            <p class="listP"></p>
+            <div class="product">
+                <img src="{{product.product_image.url}}" alt="Product 1">
+                <h2>{{product.name}}</h2>
+                <p>{{product.description}}</p>
+                <button>Buy Now</button>
+            </div>
+                       
+        {% endfor %}
+    </section>
+
 {% endblock %}

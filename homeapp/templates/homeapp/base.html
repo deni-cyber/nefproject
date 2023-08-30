@@ -14,7 +14,7 @@
     <title>{% block title %}NEF ltd-home{% endblock %}</title>
 
     
-   <!-- <link rel="stylesheet" href="static/homeapp/css/main_style.css"> 
+    <!-- <link rel="stylesheet" href="static/homeapp/css/main_style.css"> 
     <link rel="stylesheet" href="static/homeapp/css/css_ids.css">
     <link rel="stylesheet" href="static/homeapp/css/slideshow.css">
     <link rel="stylesheet" href="static/homeapp/css/footer.css">
@@ -26,6 +26,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/footer.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/about.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/service.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/products.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/css/project.css' %}">
 
 
 
@@ -38,7 +41,7 @@
   
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
 
     <a class="navbar-brand bg-light" id="customlogo" href="#"> <img src="{% static 'homeapp/images/logo.png' %}"  alt="Logo" width="30" height="30" class="d-inline-block align-top">
         NEF ltd</a>
@@ -61,7 +64,7 @@
           <a class="nav-link" href="{% url 'products' %}">products</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'projects' %}">projects</a>
+            <a class="nav-link" href="{% url 'projects' %}">projects-portfolio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -141,6 +144,7 @@
 
 <script src="{% static 'homeapp/js/main_script.js' %}"></script>
 <script src="{% static 'homeapp/js/animatedslideshow.js' %}"></script>
+<script src="{% static 'homeapp/js/projectdisp.js' %}"></script>
 
 </body>
 </html> 

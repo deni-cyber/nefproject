@@ -9,9 +9,19 @@
 
 {% load static %}
 
-
-<h2 id="horizontalDiv" class="pb-2 border-bottom" style="color: white; text-align: center;">OUR SERVICES</h2>
-
+<header>
+    <h1><b>Our Services</b></h1>
+</header>
+<section class="services-container">
+    {% for service in services%}
+    <div class="service">
+        <img src="{{service.service_image.url}}" alt="Service 1">
+        <h2>{{service.name}}</h2>
+        <p>{{service.description}}</p>
+    </div>
+    {%endfor%}
+    
+</section>
 
 
 {% endblock %}

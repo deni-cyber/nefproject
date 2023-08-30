@@ -7,6 +7,21 @@
 {% load static %}
 
 {% block content %}
-      <h1 style="text-align: center;" id="horizontalDiv">projects</h1>
+<header>
+      <h1><b>Projects</b></h1>
+</header>
+<section class="projects-container">
+      {% for project in projects %}
+            <div class="project">
+            <img src="{{project.project_image.url}}" alt="Project 1" class="project-image">
+            <h2 class="project-title">{{project.name}}</h2>
+                  <div class="project-description-caller">tap here to view or hide description</div>
+            
+            <p class="project-description"> {{project.description}}</p>
+            </div>
+      {% endfor %}
+      
+      
+  </section>
 
 {% endblock %}
