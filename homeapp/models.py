@@ -29,7 +29,7 @@ class Worker(models.Model):
     name = models.CharField(max_length=100)
     position= models.CharField(max_length=100)
     description = models.TextField()
-    worker_image = models.ImageField(upload_to='products_images/', default='default_image.jpg')
+    worker_image = models.ImageField(upload_to='workers_images/', default='default_image.jpg')
     def __str__(self):
         return self.name
     
