@@ -98,7 +98,7 @@ padding: 20px;
     top: 50%; /* Position the text at the vertical center of the container */
     left: 50%; /* Position the text at the horizontal center of the container */
     transform: translate(-50%, -50%); /* Center the text precisely */
-    background-color: rgba(0, 0, 0, 0.24); /* Semi-transparent background */
+    background-color: rgba(21, 10, 124, 0.24); /* Semi-transparent background */
     padding: 20px;
     color: white;
     text-align: center;
@@ -125,6 +125,8 @@ padding: 20px;
         padding: 0px;
         color: white;
         text-align: center;
+        background-color: rgba(21, 10, 124, 0.116); /* Semi-transparent background */
+
     }
     .responsive-section {
         padding: 5px;
