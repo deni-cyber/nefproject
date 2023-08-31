@@ -13,20 +13,20 @@
 <div class="image-container jumbotron " >
     <img src="{% static 'images/bgn.jpg' %}"  style="width: 100%;" alt="Image Description">
     <div class="text-overlay">
-        <h1>North Edge Fabricators ltd</h1>
-        <p>Building Visionary Solutions</p>
+        <h1>Build       it <br/>Live it!</h1>
+        <p>A visionary solutions</p>
     </div>
     
 </div>
 
 <div class="row">
-    <div class="col-md-6 mx-0 px-0">
+    <div class="col-md-4 mx-0 px-0">
         <img src="{% static 'images/installationbg.jpg' %}" class="displayproudimage" style="width: 100%;" alt="Image Description">
     </div>
 
-    <div class="col-md-6 mx-0 aboutdiv">
+    <div class="col-md-4 mx-0 aboutdiv">
 
-      <h2>Experience Professionalism</h2>
+      <h1 class="boldh1"><b>Experience Professionalism in Fabrication</b></h1>
         <p><small>
             "We Are Pro Fabricators".<br/>
             Welcome to North Edge Fabricators Ltd,
@@ -42,42 +42,42 @@
            <a  class="nav-link" href="{% url 'about' %}"> <button class="linkButton">Learn More →</button> </a>
         </div>
     </div>
+    <div class="col-md-4 mx-0 px-0">
+        <img src="{% static 'images/installationbg1.jpeg' %}" class="displayproudimage" style="width: 100%;" alt="Image Description">
+    </div>
     
 </div>
 
-<section class="responsive-section container">
-    <div class="container">
+<section class="responsive-section ">
+    <div>
 
         <div class="row">
-            <div class="col-md-3 ">
+            <div class="col-md-2 ">
                 <div>
-                   <h1 class="boldh1"> PROUDLY MADE FOR OUR YOU </h1> 
+                   <h1 class="boldh1"> Built For You</h1> 
                 </div>
             </div>
-            <div class="col-md-9 ">
+            <div class="col-md-10 ">
                 
                 <div class="pdiv">
                     <h4>Products</h4>
-                    
+                    <div class="image-section ">
                         {% for product in products %}
-                        <p class="listP">{{product.name}}</p>
-                       
+                        <div>
+                            <img src="{{product.product_image.url}}" alt="product image">
+                            <p class="listP">{{product.name}}</p>
+                        </div>
+
                         {% endfor %}
-                    
+                        
+                    </div>                    
                 </div>
             </div> 
             
 
         </div>
         <section class="responsive-section2">
-
-            <div class="image-section ">
-                {% for product in products %}
-                <img src="{{product.product_image.url}}" alt="product image">
-                {% endfor %}
-                
-            </div>
-            <a  href="{% url 'products' %}"> <button class="linkButton">See More →</button> </a>
+            <a  href="{% url 'products' %}"> <button class="linkButton">Check Out →</button> </a>
 
         </section>
     </div>
@@ -86,7 +86,7 @@
 <section class="responsive-section">
     <div class="row">
         <div class="col-md-4">
-            <h3>Our Services</h3>
+            <h3 class="boldh1">Our Services</h3>
 
             <div class="slideshow-container">
                         
@@ -102,7 +102,7 @@
             </div>
             
         </div>
-        <div class="col-md-8 bg-dark container">
+        <div class="col-md-8 container">
             {% for service in services %}
             <p class="listP2">{{service.name}}</p>
             {% endfor %}
@@ -144,7 +144,7 @@
             </div>  
 
             <div class="col-md-5 ">
-                <h3><b>Recent Projects</b></h3>
+                <h3 class="boldh1">Recent Projects</h3>
                 <div class="slideshow-container2">
                     {% for project in projects %}
 

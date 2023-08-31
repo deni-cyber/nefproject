@@ -41,37 +41,40 @@
   
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light " >
 
     <a class="navbar-brand bg-light" id="customlogo" href="#"> <img src="{% static 'homeapp/images/logo.png' %}"  alt="Logo" width="30" height="30" class="d-inline-block align-top">
-        NEF ltd</a>
+        North Edge Fabricators ltd</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav ml-auto">
+        
         <li class="nav-item active">
-          <a class="nav-link " href="{% url 'home' %}">Home</a>
+          <a class="nav-link  " href="{% url 'home' %}"><b>Home</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'about' %}"><b>About</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'services' %}">Services</a>
+          <a class="nav-link" href="{% url 'services' %}"><b>Services</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'products' %}">products</a>
+          <a class="nav-link" href="{% url 'products' %}"><b>products</b></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'projects' %}">projects-portfolio</a>
+            <a class="nav-link" href="{% url 'projects' %}"><b>projects</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          <a class="nav-link" href="{% url 'contact' %}"><b>Contact</b></a>
         </li>
       </ul>
     </div>
   </nav>
+
+ 
 
 
   <main>
@@ -101,8 +104,8 @@
                   
       <p>
 
-          <h2>Location</h2>
-              <p>Nairobi- kariobangi south behind co-operative Bank</p>
+          <h2>Direction</h2>
+              <p>Nairobi-Kariobangi light industries off Outering Road.</p>
       </p>
       
     </div>

@@ -2,6 +2,13 @@
     background-color: orangered;
 }
 
+.abouth1{
+  font-size: xx-large;
+  color: white;
+  font-weight: bold;
+
+}
+
   .team-section {
     margin-top: 10px;
     display: flex;
@@ -11,29 +18,30 @@
   }
   .team-member {
     width: 30%;
-    margin: 1px;
+    margin: 15px;
     text-align: center;
     position: relative;
   }
   .team-image {
-    max-width: 100%;
-    height: 100%;
-    border-radius: 1%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
   }
   .team-member:hover .team-image {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
   .team-caption {
     position: absolute;
     bottom: 10px;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 68, 0, 0.74);
     color: #fff;
     padding: 5px 0;
     font-size: 14px;
+    border-radius: 15px;
   }
 
 
@@ -42,6 +50,11 @@
     .team-member {
       width: calc(100% - 20px);
       height: auto;
+    }
+    .abouth1{
+      color: white;
+      font-weight: bold;
+
     }
   }
 

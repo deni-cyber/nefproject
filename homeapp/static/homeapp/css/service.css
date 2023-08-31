@@ -27,7 +27,7 @@ header {
 }
 
 .service:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .service img {
@@ -50,6 +50,6 @@ header {
     }
 
     .service {
-        width: calc(50% - 20px);
+        width: calc(33.3% - 20px);
     }
 }

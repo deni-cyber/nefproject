@@ -1,10 +1,11 @@
 
 body {
+    
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: orangered;
+    background-color: rgb(83, 150, 150);
 
   }
 
@@ -40,21 +41,19 @@ padding: 20px;
 
 .jumbotron {
     color: white;
-    text-align: center;
 }
   
 .jumbotron h1{
     text-align: center;
     font-weight: bolder;
-    color: orangered;
+    color: white;
     font-family: 'Times New Roman', Times, serif; 
-    border: 1; text-shadow: -1px -1px 0 white,  /* Top-left border */1px -1px 0 white,   /* Top-right border */-1px 1px 0 white,   /* Bottom-left border */1px 1px 0 white;    /* Bottom-right border */ 
     font-size: 102px; 
     word-wrap: break-word;
 }
 
 .jumbotron p{
-    color: white;
+    color: gold;
     text-align: center;
     font-weight: bolder;
     word-wrap: break-word;
@@ -72,11 +71,15 @@ padding: 20px;
 
 @media (max-width: 600px) {
     .jumbotron h1{
-        font-size: 250%; /* Adjust font size for smaller screens */
+        font-size: 400%; /* Adjust font size for smaller screens */
     }
     .jumbotron p{
-        font-size: 90%; /* Adjust font size for smaller screens */
+        font-size: 70%; /* Adjust font size for smaller screens */
     }
+    body {
+        background-color: white;
+    
+      }
 }
 
 
@@ -104,10 +107,8 @@ padding: 20px;
 /* Default styles for the responsive section */
 .responsive-section {
     padding: 20px;
-    background-color: orangered;
-    min-height: 450px;
-
-    
+    background-color: darkslategray;
+    min-height: 450px; 
 }
 
 /* Media query for smaller screens */
@@ -125,11 +126,16 @@ padding: 20px;
         color: white;
         text-align: center;
     }
+    .responsive-section {
+        padding: 5px;
+        background-color: darkslategray;
+        min-height: 450px; 
+    }
 }
 
 .responsive-section2 {
     padding: 20px;
-    background-color: white;
+    background-color: rgb(83, 150, 150);
 }
 
 /* Media query for smaller screens */
@@ -319,7 +325,7 @@ padding: 20px;
         text-align: center;
     }
     .aboutdiv{
-        background-color: orangered;
+        background-color: darkslategray;
         padding: 10px;
         color: white ;
         padding: 20px;
